@@ -1,1 +1,1 @@
-# God dammit
+CSS is amazing
