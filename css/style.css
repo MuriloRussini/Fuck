@@ -102,10 +102,25 @@ h3 { font-size: var(--fs-h3) }
   
 }
 
+:focus {
+  outline: 3px solid var(--clr-accent);
+  outline-offset: 3px;
+}
+
 .btn {
   padding: .8em;
+  display: inline-block;
+  padding: .5em 2.5em;
   background: var(--clr-accent);
+  color: var(--clr-dark);
   width: fit-content;
+  cursor: pointer;
+  text-decoration: none;
+  font-weight: var(--fw-bold);
+  font-size: .8rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  transition: 150ms ease-in-out;
 }
 
 .btn:hover {
@@ -125,7 +140,7 @@ nav { display: none; }
   position: relative;
 }
 
-@media (min-width: 600px) {
+@media (min-width: 500px) {
   .intro {
     display: grid;
     margin: 0 auto;
@@ -147,7 +162,7 @@ nav { display: none; }
   
   /* subtitle looks like shit on desktop (front-end behind image) and if we change it the mobile version sucks */
   
-  .section__subtitle--about {
+  .section__subtitle--intro {
     align-self: start;
     grid-column: -1 / 1;
     grid-row: 2;
@@ -160,11 +175,16 @@ nav { display: none; }
   
   /* My services section */
   
+
+  .services {
+    margin-bottom: 4em;
+  }
+
   .my-services {
     background-color: var(--clr-dark);
-    background-image: none;
+    background-image: url(background.jpg);
     background-size: cover;
-    /* background-blend-mode: multiply; */
+    background-blend-mode: multiply;
     color: var(--clr-light);
     text-align: center;
   }
@@ -177,18 +197,19 @@ nav { display: none; }
   .section__title--services::after {
     content: '';
     display: block;
-    width: 3em;
+    width: 2em;
     height: 1px;
     margin: 0.5em auto 1em;
     background: var(--clr-light);
     opacity: 0.25;
   }
   
-  @media (min-width: 880px) {
+  @media (min-width: 800px) {
     .services {
       display: flex;
-      max-width: 1800px;
-      margin: 0 auto;
+      max-width: 1000px;
+      margin-left: auto;
+      margin-right: auto;
     }
 
     .service + .service {
