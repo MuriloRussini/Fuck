@@ -120,6 +120,7 @@ h3 { font-size: var(--fs-h3) }
   font-size: .8rem;
   text-transform: uppercase;
   letter-spacing: 2px;
+  /* transition can be improved, look into it */
   transition: all 150ms ease-in-out;
 }
 
